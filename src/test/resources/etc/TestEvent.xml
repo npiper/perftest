@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:Event Type="Application" xmlns:ns="http://sensis.com.au/if/cmf/sifEvent/2007/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sensis.com.au/if/cmf/sifEvent/2007/1 D:\Micky\work\morph\IntegrationFabric\schema\xschema\sensis.com.au\if\cmf\sifEvent.xsd">
+	<Header>
+		<Service>
+			<ServiceName>ExceptionService</ServiceName>
+			<OperationName>handleException</OperationName>
+			<MessageType>handleException</MessageType>
+		</Service>
+		<From>BCM</From>
+		<Context>
+			<BusinessProcessID>-6d6c82c:11a091f11fa:-7eac</BusinessProcessID>
+			<MessageID>-6d6c82c:11a091f11fa:-7eae</MessageID>
+			<InitMessageID>-6d6c82c:11a091f11fa:-7eae</InitMessageID>
+			<MessageCorrelationID>-6d6c82c:11a091f11fa:-7ead</MessageCorrelationID>
+			<Transport Type="JMS">
+				<InitMesssageID>-6d6c82c:11a091f11fa:-7eae</InitMesssageID>
+				<MessageID>-6d6c82c:11a091f11fa:-7eae</MessageID>
+			</Transport>
+		</Context>
+		<MessageDate>2008-05-22T15:03:47.675+10:00</MessageDate>
+		<Priority>High</Priority>
+	</Header>
+	<LogDateTime>2008-05-22T15:03:47.675+10:00</LogDateTime>
+	<UserID/>
+	<LogPoint>Error</LogPoint>
+	<QueueName>queue.Fabric.Exception</QueueName>
+	<ApplicationEvent>
+		<Field>
+			<Name>Source Id</Name>
+			<Value>DASExtract</Value>
+		</Field>
+		<Field>
+			<Name>Ticket ID</Name>
+			<Value>d22de9e3-098e-412d-a290-5bb07d800c55</Value>
+		</Field>
+		<Field>
+			<Name>Request Received Date</Name>
+			<Value>2008-05-22T15:03:46.881+10:00</Value>
+		</Field>
+		<Field>
+			<Name>EndPoint</Name>
+			<Value>IGEN_DAS</Value>
+		</Field>
+		<Field>
+			<Name>Target EndPoint</Name>
+			<Value>DAS_PARFUP</Value>
+		</Field>
+		<Field>
+			<Name>Target EndPoint</Name>
+			<Value>DAS_SWYMS</Value>
+		</Field>
+		<Field>
+			<Name>File Source URI</Name>
+			<Value>/dasTestFile_TC1_1_[1211432576546].txt</Value>
+		</Field>
+		<Field>
+			<Name>File Target URI</Name>
+			<Value>/dasTestFile_TC1_1_[1211432576546].txt</Value>
+		</Field>
+		<Field>
+			<Name>File Source URI</Name>
+			<Value>/dasTestFile_TC1_2_[1211432576546].txt</Value>
+		</Field>
+		<Field>
+			<Name>File Target URI</Name>
+			<Value>/dasTestFile_TC1_2_[1211432576546].txt</Value>
+		</Field>
+		<Field>
+			<Name>Mick4</Name>
+			<Value>Mick4</Value>
+		</Field>		
+	</ApplicationEvent>
+	<Payload>
+		<ns:Event Type="Exception">
+			<Header>
+				<Service>
+					<BusinessProcess>FileTransferService</BusinessProcess>
+					<ServiceName>FileTransferService</ServiceName>
+					<OperationName>execute</OperationName>
+					<MessageType>cmf_fts_request</MessageType>
+				</Service>
+				<From>iGen</From>
+				<To>SIF</To>
+				<Context xmlns:ns="http://sensis.com.au/if/cmf/sifFTS/2007/1">
+					<BusinessProcessID>ID:&lt;778161.1211432626840.0></BusinessProcessID>
+					<MessageID>ID:&lt;778161.1211432626840.0></MessageID>
+					<InitMessageID>1211432576546</InitMessageID>
+					<Transport Type="JMS">
+						<MessageID>ID:&lt;523192.1211432627222.0></MessageID>
+					</Transport>
+				</Context>
+				<MessageDate>2008-05-22T15:03:46.881+10:00</MessageDate>
+			</Header>
+			<LogDateTime>2008-05-22T15:03:47.553+10:00</LogDateTime>
+			<UserID/>
+			<LogPoint>Error</LogPoint>
+			<QueueName>queue.Fabric.FTS.Request</QueueName>
+			<ApplicationEvent/>
+			<ExceptionEvent priority="High" severity="Error">
+				<Code>IF-000123</Code>
+				<Field>
+					<Name>ErrorMessage</Name>
+					<Value>Unknown Description for error code 'null'</Value>
+				</Field>
+			</ExceptionEvent>
+			<Payload/>
+		</ns:Event>
+	</Payload>
+</ns:Event>
