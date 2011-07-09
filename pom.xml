@@ -1,50 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.cgu.icc</groupId>
-  <artifactId>perftest.grinder</artifactId>
-  <version>1.0</version>
-  <name>perftest.grinder</name>
-  <description>Grinder background performance test, CORE Grinder
-
-Sets up basic classpath, files, library dependencies.   Projects should have this as a parent so that they can merely execute a specific load profile / configuration.  The child project could be environment dependent / i.e. address/port etc;</description>
-<repositories>
-    <repository>
-      <id>grinder</id>
-      <url>http://webflange.sourceforge.net/maven</url>
-    </repository>
-</repositories>
-<dependencies>
-
-    <dependency>
-      <groupId>TheGrinder</groupId>
-      <artifactId>grinder</artifactId>
-      <version>3.0.1</version>
-    </dependency>
-    </dependencies>
-    <build>
-        <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.1</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>java</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <mainClass>net.grinder.Console</mainClass>
-          <workingDirectory>/tmp</workingDirectory>
-          <!-- 
-          <arguments>
-            <argument>-X</argument>
-          </arguments>
-           -->
-        </configuration>
-      </plugin>
-    </plugins>
-    </build>
-    
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+  	<modelVersion>4.0.0</modelVersion>
+  	<groupId>com.cgu.icc</groupId>
+  	<artifactId>perftest</artifactId>
+  	<name>perftest</name>
+  	<packaging>pom</packaging>
+  	<version>1.0</version>
+  
+  	<modules>	
+  		<module>perftest-core</module>
+  		<module>perftest-agent</module>
+  	</modules>  	
 </project>
