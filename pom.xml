@@ -12,5 +12,6 @@
   	<modules>	
   		<module>perftest-core</module>
   		<module>perftest-agent</module>
+  		<module>perftest-console</module>
   	</modules>  	
 </project>
